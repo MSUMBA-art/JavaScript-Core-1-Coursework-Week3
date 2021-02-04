@@ -16,7 +16,7 @@ function checkNullValue(index) {
 } 
 
 if (pairsByIndex.some(checkNullValue)) {
-  return process.exit(1);
+  return process.exit(0);
 }
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
