@@ -10,15 +10,11 @@
   "I like cats. One night I went to the park and I saw 100000 cats. It was a brilliant night."
 */
 
-let story =
+let story = 
   "I like dogs. One day I went to the park and I saw 10 dogs. It was a great day.";
-  let catStory = story.replace(/dogs/g, "cats");
-  let oneNightStory = catStory.replace(/day/g, "night");
-  let totalCats = oneNightStory.replace(10, 100000);
-  let greatToBrilliant = totalCats.replace("great", "brilliant");
+let catStory = "I like cats. One night I went to the park and I saw 100000 cats. It was a brilliant night.";
+let result = story.replace(story, catStory);
 
-
-let result = greatToBrilliant;
 console.log(result);
 
 /* EXPECTED OUTPUT */
