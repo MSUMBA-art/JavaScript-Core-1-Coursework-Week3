@@ -12,6 +12,9 @@
 */
 
 function safeLevels() {}
+  function safeLevels(oxArr) { 
+    return oxArr.find((num) => num.replace("%", "") > 19.5 && num.replace("%", "") < 23.5);
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
