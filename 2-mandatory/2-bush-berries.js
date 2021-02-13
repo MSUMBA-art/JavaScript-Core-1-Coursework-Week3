@@ -16,15 +16,17 @@
   The .some() method tests to see if some of the values (at least 1) in an array 
   match what you're looking for and returns true or false. 
   
-  The .every() method will only return true if all values match watch you're looking for. 
+  The .every() method will only return true if all values match what you're looking for. 
   
   Let's first look at an example that will teach you how to use these methods.
 */
 
 function bushChecker(bushArr) {
-  if (bushArr.every((bush) => bush === "pink"))
-  return "Toxic! Leave bush alone";
-  else return "Bush is safe to eat from";
+  let pinkBerries = bushArr.every((elem) => {
+    return elem.localeCompare("pink") ==0
+  })
+  if (pinkBerries) return "Bush is safe to eat from";
+  else return "Toxic! Leave bush alone!";
 
 }
 

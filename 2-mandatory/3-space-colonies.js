@@ -16,13 +16,9 @@
 */
 
 function colonisers(voyagers) {
-  let newVoyagers = [];
-  for (let i = 0; i < voyagers.length; i++) {
-    if (voyagers[i].startWith("A") && voyagers[i].includes("family")) {
-      newVoyagers.push(voyagers[i])
-    }
-  }
-  return newVoyagers
+  return voyagers.filter((elem) => {
+    return elem.includes("family") && elem.charAt(0) === "A"
+  })
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
