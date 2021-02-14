@@ -64,7 +64,9 @@ function checkCodeIsThere(stringText) {
   
   Hint: Use the corresponding array method to split the array.
 */
-function getTransportModes() {}
+function getTransportModes(array) {
+return array.slice(1);
+}
 
 /*
   Implement the function isAccessibleByTransportMode that
@@ -81,7 +83,11 @@ function getTransportModes() {}
     
   Hint: Use the corresponding array method to decide if an element is member of an array.
 */
-function isAccessibleByTransportMode() {}
+function isAccessibleByTransportMode(array, string) {
+  if (array.includes(string)) {
+    return true;
+  } return false;
+}
 
 /*
   Implement the function getLocationName that
@@ -92,7 +98,9 @@ function isAccessibleByTransportMode() {}
    - Returns the name of the location
       e.g: "Tower Bridge"
 */
-function getLocationName() {}
+function getLocationName(location) {
+  return location[0];
+}
 
 /*
  We arrived at the final method. it won't take long if you use the previously implemented functions wisely.
