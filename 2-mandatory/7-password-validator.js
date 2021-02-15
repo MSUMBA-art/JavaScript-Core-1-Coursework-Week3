@@ -1,3 +1,12 @@
+// var str = "aldjDFGhfjjky";
+// let upperCase = /[A-Z]/g;
+// let lowercase = /[a-z]/g;
+// let numbers = /[0-9]/g;
+// let charecters = /[!#$%.*&]/g;
+// let moreThan4 = str.length > 4;
+
+// let result = upperCase.test(str);
+// console.log(result);
 /* 
 Password Validation
 
@@ -23,6 +32,22 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
+  let upperCase = /[A-Z]/g;
+  let lowercase = /[a-z]/g;
+  let numbers = /[0-9]/g;
+  let characters = /[!#$%.*&]/g;
+  // let moreThan4 = str.length > 4;
+
+  return passwords.map((element)=> {
+    return (upperCase.test(element)
+      && lowercase.test(element)
+      && numbers.test(element)
+      && characters.test(element)
+      && element.length > 4
+      )
+  });
+
+
 
 }
 
