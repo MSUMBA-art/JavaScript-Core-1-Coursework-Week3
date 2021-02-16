@@ -32,18 +32,19 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
-  let upperCase = /[A-Z]/g;
-  let lowercase = /[a-z]/g;
-  let numbers = /[0-9]/g;
-  let characters = /[!#$%.*&]/g;
+  let upperCase = /[A-Z]/;
+  let lowercase = /[a-z]/;
+  let numbers = /[0-9]/;
+  let characters = /[!#$%.*&]/;
   // let moreThan4 = str.length > 4;
 
-  return passwords.map((element)=> {
+  return passwords.map((element, index, arr)=> {
     return (upperCase.test(element)
       && lowercase.test(element)
       && numbers.test(element)
       && characters.test(element)
       && element.length > 4
+      && arr.indexOf(element) === index
       )
   });
 

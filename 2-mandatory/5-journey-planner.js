@@ -129,10 +129,11 @@ function getLocationName(location) {
    
   Advanced challange: try to use arrow function when invoking an array method.
 */
-function journeyPlanner(locations, transportMode) {
-  return locations.filter(locations, transportMode.includes(transportMode)).map(position[0]);
+function journeyPlanner(locations, transportMode) { 
+  return locations.filter(el => el.slice(1).includes(transportMode)).map(alexander => alexander[0]);
+  //transportMode.includes(transportMode)).map(position[0]);
   // Implement the function body
-}
+};
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
